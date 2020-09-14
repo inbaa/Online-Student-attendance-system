@@ -1,0 +1,10 @@
+<?php
+session_start();
+unset($_SESSION["name"]);
+unset($_SESSION["fcode"]);
+unset($_SESSION["subject"]);
+unset($_SESSION["logged_in"]);  
+session_destroy();
+header("Location:index.php");
+?>
+
