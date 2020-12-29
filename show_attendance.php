@@ -41,7 +41,24 @@ if(!isset($_SESSION['logged_in']))
 {
 //table heading
 	?>
-	<h2><?php echo strtoupper($_POST['name']); ?></h2>
+	<h2><?php echo strtoupper($_POST['name']); ?>    </h2>
+	<h5>
+<?php
+//Attendance percentage
+$total=mysqli_query($con,"select COUNT(*) as 'count' from attendance where  admno='$_POST[admno]' and subject='$_SESSION[subject]' ");
+$zzz = mysqli_fetch_assoc($total);
+ echo 'Total No of Clases : ';
+ echo $zzz['count']. "<br>";
+
+$present=mysqli_query($con,"select COUNT(*) as 'count' from attendance where  admno='$_POST[admno]' and subject='$_SESSION[subject]' and status='present' ");
+$zz = mysqli_fetch_assoc($present);
+ echo 'No of Clases Present : ';
+ echo $zz['count']. "<br>";
+
+echo 'Attendance Percentage : ';
+echo ($zz['count']/$zzz['count'])*100;
+?>
+</h5>
 	<table class="table table-stripped">
  	<tr>
  	 <th>Date</th><th>Period</th><th>Status</th> 

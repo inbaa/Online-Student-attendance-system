@@ -49,7 +49,7 @@ include("header.php");
 <!----  Update schedule  ----->
  	<form action="schedule.php" method="POST">
  
-  		<center>	<input type="submit" value="Upate Schedule" class="btn btn-primary btn-lg"> </center>
+  		<center>	<input type="submit" value="Update Schedule" class="btn btn-primary btn-lg"> </center>
 
  		</form>	
  	</div>

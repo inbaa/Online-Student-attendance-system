@@ -85,7 +85,7 @@ include("db.php");
 		<div class="form-group">
 
 		<label for="pass">Password</label>
-		<input type="Password" name="pass" id="pass"  class="form-control" required>
+		<input type="Password" name="pass" id="pass"  class="form-control" required autocomplete="new-password">
 
 		</div>
 		

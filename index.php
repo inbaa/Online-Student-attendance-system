@@ -228,7 +228,7 @@ span.psw {
       <input type="text" placeholder="Enter Username"  pattern="[a-zA-Z0-9]+" name="username" required>
 
       <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password"  name="password" required>
+      <input type="password" placeholder="Enter Password"  name="password" required autocomplete="new-password">
         
       <button type="submit" name="faculty">Login</button>
      </div>
@@ -257,7 +257,7 @@ span.psw {
       <input type="text" placeholder="Enter Username"  pattern="[a-zA-Z0-9]+" name="uname" required>
 
       <label for="paswd"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="paswd" required>
+      <input type="password" placeholder="Enter Password" name="paswd" required autocomplete="new-password">
         
       <button type="submit" name="student">Login</button>
      </div>

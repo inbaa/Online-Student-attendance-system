@@ -47,6 +47,12 @@ include("db.php");
 
 
  	$result=mysqli_query($con,"select * from schedule where week= '$weekname' ;");
+ 	if(mysqli_num_rows($result)<=0)
+ 	{
+ 		echo "<script>alert('You have no class!');</script>"; 
+ 		session_destroy();
+ 		echo "<script>window.location.href='index.php';</script>"; 
+ 	}
 	$row=mysqli_fetch_array($result)	
 	?>
 	
